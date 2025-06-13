@@ -1,68 +1,135 @@
+/* src/css/style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #eee;
-    color: #111;
-  }
-  
-  .hero {
-    text-align: center;
-    padding: 60px 20px;
-    background-color: #eee;
-  }
-  
-  .hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-  }
-  
-  .hero p {
-    font-size: 20px;
-    color: #222;
-  }
-  
-  .links a {
-    margin: 0 10px;
-    color: #696969;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .section {
-    padding: 40px 20px;
-    max-width: 900px;
-    margin: auto;
-  }
-  
-  .section h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-  
-  .card {
-    background-color: #bdbdbd;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-  }
-  
-  .card h3 {
-    margin-top: 0;
-    color: #111;
-  }
-  
-  .card a {
-    color: #111;
-    text-decoration: none;
-  }
-  
-  .footer {
-    text-align: center;
-    padding: 30px;
-    background-color: #000;
-  }
-  
-  .footer a {
-    color: #4fd1c5;
-    font-weight: bold;
-  }
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #f1f1f1;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 4.5rem;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #ccc;
+  margin: 1rem 0;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.links a {
+  margin: 0 1rem;
+  font-weight: bold;
+  color: #66fcf1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: #ffffff;
+}
+
+.section {
+  margin-top: 4rem;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #66fcf1;
+  padding-bottom: 0.5rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #66fcf1;
+  margin-bottom: 0.5rem;
+}
+
+.card a {
+  color: #45aaf2;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.card a:hover {
+  color: #81ecec;
+}
+
+ul {
+  margin-top: 0.5rem;
+  padding-left: 1.2rem;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.footer a {
+  background: #66fcf1;
+  color: #0b0c10;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.footer a:hover {
+  background: #45aaf2;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
